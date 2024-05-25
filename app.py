@@ -3,7 +3,7 @@ menu = """
 [s] Sacar
 [e] Extrato
 [nc] Nova Conta
-[nu] Novo Usuario
+[nu] Novo Usuário
 [q] Sair
 """
 
@@ -63,7 +63,7 @@ def filtar_usuario(cpf, usuarios):
 
 def criar_usuario(usuarios):
 
-    cpf = input("Informe o CPF (Somente numeros): ")
+    cpf = input("Informe o CPF (Somente números): ")
     usuario = filtar_usuario(cpf, usuarios)
 
     if usuario:
@@ -82,18 +82,18 @@ def criar_usuario(usuarios):
             "endereco": endereco,
         }
     )
-    print("Usuario criado")
+    print("Usuário criado")
 
 
 def criar_conta_corrente(agencia, numero_conta, usuarios):
 
-    cpf = input("informe o CPF do usuario: ")
+    cpf = input("informe o CPF do usuário: ")
     usuario = filtar_usuario(cpf, usuarios)
     if usuario:
         print("Conta criada com sucesso")
         return {"agencia": agencia, "numero_conta": numero_conta, "usuario": usuario}
 
-    print("Usuario não encontrado")
+    print("Usuário não encontrado")
 
 
 while True:
@@ -126,5 +126,5 @@ while True:
     elif opcao == "q":
         break
     else:
-        print("Operação invalida")
+        print("Operação inválida")
         break
